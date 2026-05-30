@@ -513,4 +513,6 @@ def broadcast(message):
     bot.send_message(message.chat.id, f"✅ تم الإرسال:\n✔️ نجح: {success}\n❌ فشل: {failed}")
 
 print("Bot is running...")
+# Delete any existing webhook before starting long-polling
+bot.delete_webhook()
 bot.infinity_polling()
